@@ -45,6 +45,7 @@ Sub 筛选拆分表格()
                 .[a1].PasteSpecial Paste:=xlPasteFormats, Operation:=xlNone, SkipBlanks:=False, Transpose:=False
                 .[a1].Select
             End With
+            Worksheets(kr(i)).Cells.EntireColumn.AutoFit '自动调节表的各列宽度
         End If
     Next
     Sheets(1).Activate '激活第一个表格
